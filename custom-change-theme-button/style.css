@@ -50,6 +50,7 @@ input#change-theme::before {
     box-shadow: 0 0 0 1px #232323;
     transform: scale(.98, .96);
     transition: .5s;
+    cursor: pointer;
 }
 
 input#change-theme:checked::before {

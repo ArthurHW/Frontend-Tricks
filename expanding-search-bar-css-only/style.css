@@ -5,13 +5,12 @@
     margin: 0;
     padding: 0;
 }
-
 :root {
     --clr-primary: #ee6352;
     --clr-body: #333;
     --clr-bg: #ddd;
+    --transition-duration: 600ms;
 }
-
 body {
     font-family: basic-sans, sans-serif;
     min-height: 100vh;
@@ -23,7 +22,6 @@ body {
     color: var(--clr-body);
     background: var(--clr-bg);
 }
-
 .content {
     background: white;
     width: 70vw;
@@ -31,7 +29,6 @@ body {
     box-shadow: 0 0 3em rgba(0, 0, 0, .15);
     position: relative;
 }
-
 .search-bar {
     --size: 60px;
     border: 2px solid var(--clr-primary);
@@ -41,10 +38,9 @@ body {
     width: var(--size);
     padding: 3px;
     position: relative;
-    transition: width 300ms cubic-bezier(.18, .89, .32, 1.15);
+    transition: width var(--transition-duration) cubic-bezier(.18, .89, .32, 1.15);
     overflow: hidden;
 }
-
 .search-bar .search-bar__input {
     flex-grow: 1;
     font-size: 1.5rem;
@@ -58,11 +54,9 @@ body {
     opacity: 0;
     cursor: pointer;
 }
-
 .search-bar .search-bar__input:focus {
     outline: 0;
 }
-
 .search-bar .search-bar__submit {
     font-size: 1.5rem;
     cursor: pointer;
@@ -72,24 +66,20 @@ body {
     width: calc(var(--size) - 10px);
     height: calc(var(--size) - 10px);
     margin-left: auto;
-    transition: background 150ms ease-in-out; 
+    transition: background var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out; 
 }
-
 .search-bar:focus-within {
     width: 100%;
 }
-
 .search-bar:focus-within .search-bar__input {
     opacity: 1;
     cursor: initial;
     width: calc(100% - var(--size));
 }
-
 .search-bar:focus-within .search-bar__submit {
     background: var(--clr-primary);
     color: white;
 }
-
 .search-bar:focus-within .search-bar__submit:focus,
 .search-bar:focus-within .search-bar__submit:hover {
     outline: 0;

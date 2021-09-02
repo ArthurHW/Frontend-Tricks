@@ -3,16 +3,12 @@ body {
     padding: 0;
     background: #292929;
 }
-
-body
-
 .center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 input#change-theme {
     position: relative;
     width: 120px;
@@ -27,7 +23,6 @@ input#change-theme {
                 0 5px 20px rgba(0,0,0,0.5), 
                 inset 0 0 15px rgba(0,0,0,0.2);
 }
-
 input#change-theme:checked{
     background: linear-gradient(0deg, #6dd1ff, #20b7ff);
     box-shadow: 0 0 2px #6dd1ff,
@@ -37,7 +32,6 @@ input#change-theme:checked{
                 0 5px 20px rgba(0,0,0,0.5), 
                 inset 0 0 15px rgba(0,0,0,0.2);
 }
-
 input#change-theme::before {
     content:'';
     position: absolute;
@@ -52,11 +46,9 @@ input#change-theme::before {
     transition: .5s;
     cursor: pointer;
 }
-
 input#change-theme:checked::before {
     left: 40px;
 }
-
 input#change-theme::after {
     content:'';
     position: absolute;
@@ -68,7 +60,6 @@ input#change-theme::after {
     border-radius: 50%;
     transition: .5s;
 }
-
 input#change-theme:checked::after {
     background: #63cdff;
     left: 105px;
